@@ -5,16 +5,16 @@ on:
     branches: [main]
   workflow_dispatch:
 
-  permissions:
+permissions:
   contents: read
   pages: write
   id-token: write
 
-  concurrency:
+concurrency:
     group: pages
     cancel-in-progress: true
 
-  jobs:
+jobs:
     build:
       runs-on: ubuntu-latest
       steps:
@@ -38,13 +38,13 @@ on:
             path:./public
 
     deploy:
-  runs-on: ubuntu-latest
-  needs: build
-  environment:
-    name: github-pages
-    url: ${{ steps.deployment.outputs.page_url  }}
+      runs-on: ubuntu-latest
+      needs: build
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url  }}
 
-  steps:
-    - name: Deploy
-      id: deployment
-      uses: actions/deploy-pages@v4
+     steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
