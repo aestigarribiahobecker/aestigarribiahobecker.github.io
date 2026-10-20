@@ -1,0 +1,29 @@
+baseURL = 'https://aestigarribiahobecker.github.io/'
+languageCode = 'es'
+defaultContentLanguage = "es"
+title = "Mi diario de Ingeniería"
+theme = "PaperMod"
+
+[params]
+	description = "Documentando mi camino como estudiante de Ingeniería Informática"
+	author = "Estudiante de Ingeniería Informática"
+	ShowReadingTime = true
+	ShowPostNavLinks = true
+	ShowCodeCopyButtons = true
+	DateFormat = "02/01/2006"
+
+[[menu.main]]
+	name = "Diario"
+	url = "/posts/"
+	weight = 1
+
+[[menu.main]]
+	name = "Proyectos"
+	url = "/projects/"
+	weight = 2
+
+[[menu.main]]
+	name = "Sobre mí"
+	url = "/about/"
+	weight = 3
+
